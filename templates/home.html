@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{company_name}} website</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <div class="container">
+      <img id="banner" class="img-fluid" src="../static/images/slogan.jpg" />
+      <h1 class="text-center mt-2 mb-4">{{company_name}}</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="lead">
+            Quoniam igitur nihil carentia per se ipsa potest esse bonum,
+            sapientia quoque nihil erit bonum per se ipsa, sed per quem alium
+            rem quaerendam iudicabit, id erit illi bonum, non illa res. Quod si
+            ita se habeat, non possit beatam vitam virtus efficere; alia quaedam
+            igitur sunt bona praeter sapientiam. Quodsi nihil aliud possit esse
+            bonum, virtus ipsa per se erit summum bonum, nec quicquam aliud
+            praeter illam expetendum erit. Sed haec omnia refutata et profligata
+            sunt paulo ante, cum ostenderemus non posse virtutem ipsam per se
+            beatam vitam efficere, nisi accesserit ad eam perpetua rerum
+            prosperitas. Nam si propter voluptatem, quae maxima est secundum
+            Epicurum, omnia eligenda sunt, et si nihil umquam ab eo dictum est,
+            quod non ad voluptatem referretur, non intellego cur non de
+            virtutibus eadem dicat, cum ipsa per se nihil aliud quam honesta sit
+            et tantum habeat momenti quantum iudicari potest ex utilitate, non
+            ex voluptate.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            class="img-fluid"
+            src="/static/images/office.jpg"
+            style="height: 300px"
+          />
+        </div>
+      </div>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>{% for job in jobs%} {% include 'jobitems.html'%} {%endfor%}</div>
+      <div class="text-center">
+        <a
+          type="button"
+          href="mailto:hello@pranav.ai?subject=Questions%20regarding%20company%20policy&body=Name%20%3A%20%3Cyour_name%3E%0D%0AQuestion%20%3A%20%3Cquestion%3E"
+          class="btn btn-primary btn-lg"
+          >Contact Us</a
+        >
+      </div>
+    </div>
+    {% include 'footer.html' %}
+    <script src="" async defer></script>
+  </body>
+</html>
