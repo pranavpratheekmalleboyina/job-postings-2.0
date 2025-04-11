@@ -1,7 +1,7 @@
 <div class="border-bottom row" style="margin-bottom: 10px; padding-bottom: 4px">
   <div class="col-10">
     <h4 style="color: rgb(110, 110, 110); margin-bottom: 4px">
-      {{ job['title']}}
+      {{job['title']}}
     </h4>
     <div>
       <b>Location: {{job['location']}}</b>
@@ -13,7 +13,7 @@
   <div class="col-2">
     <a
       type="button"
-      href="mailto:hello@pranav.ai?subject=Application%20for%20{{job['title']}}&body=Name%20%3A%20%3Cyour_name%3E%0D%0AResume%20%3A%20%3Cresume%20link%3E%0D%0ALinkedIn%20%3A%20%3Clinkedin%20link%3E"
+      href="/api/jobs/{{job['id']}}"
       class="btn btn-outline-primary float-right align-middle"
       >Apply</a
     >
